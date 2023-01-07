@@ -1,0 +1,6 @@
+# Example from Bedrock-OSS/wiki-addon
+pack.name=§7Ghostly §rGuide
+pack.description=Bedrock OSS Organization
+entity.wiki:ghost.name=Ghost# How terrifying!
+item.spawn_egg.entity.wiki:ghost.name=Ghost
+item.wiki:ectoplasm.name=§aEctoplasm§r
