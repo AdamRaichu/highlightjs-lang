@@ -1,0 +1,8 @@
+{
+  "name": "hljs-lang",
+  "description": "A hljs language for Minecraft's .lang files",
+  "authors": "AdamRaichu",
+  "version": "1.0.0",
+  "main": "./src/languages/lang.js",
+  "dependencies": {}
+}
