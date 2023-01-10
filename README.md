@@ -32,7 +32,7 @@ The bare minimum to auto-detect the language and highlight some code.
 ```js
 // load the library and ALL languages
 hljs = require('highlight.js');
-html = hljs.highlightAuto('<h1>Hello World!</h1>').value
+html = hljs.highlightAuto('gameTip.findTree=Punch a tree to gather wood.').value
 ```
 
 To highlight code with a specific language, use `highlight`:
