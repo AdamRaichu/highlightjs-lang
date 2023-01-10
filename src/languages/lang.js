@@ -17,9 +17,9 @@ export default function (hljs) {
         contains: [
           {
             begin: "[A-Za-z0-9\\-_]+:[A-Za-z0-9\\-_]+",
-            end: "(?=\\.)"
-          }
-        ]
+            end: "(?=\\.)",
+          },
+        ],
       },
       {
         begin: "\\=",
@@ -28,21 +28,26 @@ export default function (hljs) {
           {
             className: "built_in",
             begin: "§(?=[0-9a-gk-or])",
-            end: "."
+            end: "[0-9a-gk-or]",
           },
           {
             className: "variable",
             begin: ":_",
-            end: ":|(?!.)"
+            end: ":|(?!.)",
           },
           {
             className: "regexp",
             begin: "%([1-9]+\\$)?(\\d)*(\\.(\\d)+)?(?=[dcbsfexh0-9])",
-            end: "[dcbsfexh0-9]"
-          }
-        ]
+            end: "[dcbsfexh0-9]",
+          },
+          {
+            className: "title",
+            begin: "<(?=[A-Za-z0-9 :]+>)",
+            end: ">|(?!.)",
+          },
+        ],
       },
-      hljs.COMMENT("#", "$")
-    ]
-  }
+      hljs.COMMENT("#", "$"),
+    ],
+  };
 }
