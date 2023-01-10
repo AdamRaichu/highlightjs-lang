@@ -5,11 +5,16 @@
 */
 
 export default function(hljs) {
+  var FORMAT_CODES = {
+    className: "built_in",
+    begin: "§(?=[0-9a-gk-or])",
+    end: "."
+  }
+
   return {
     name: "lang",
     case_insensitive: false,
     // §[0-9a-gk-or]{1}
-    keywords: ["§0", "§1", "§2", "§3", "§4", "§5", "§6", "§7", "§8", "§9", "§a", "§b", "§c", "§d", "§e", "§f", "§g", "§k", "§l", "§m", "§n", "§o"],
     contains: [
       {
         className: "string",
@@ -25,7 +30,9 @@ export default function(hljs) {
       {
         begin: "\\=",
         end: "(?!.)|(?=#)",
-        contains: []
+        contains: [
+          FORMAT_CODES
+        ]
       },
       hljs.COMMENT("#", "$")
     ]
