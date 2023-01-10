@@ -4,13 +4,7 @@
   Author: AdamRaichu
 */
 
-export default function(hljs) {
-  var FORMAT_CODES = {
-    className: "built_in",
-    begin: "§(?=[0-9a-gk-or])",
-    end: "."
-  }
-
+export default function (hljs) {
   return {
     name: "lang",
     case_insensitive: false,
@@ -31,7 +25,21 @@ export default function(hljs) {
         begin: "\\=",
         end: "(?!.)|(?=#)",
         contains: [
-          FORMAT_CODES
+          {
+            className: "built_in",
+            begin: "§(?=[0-9a-gk-or])",
+            end: "."
+          },
+          {
+            className: "variable",
+            begin: ":_",
+            end: ":|(?!.)"
+          },
+          {
+            className: "regexp",
+            begin: "%([1-9]+\\$)?(\\d)*(\\.(\\d)+)?(?=[dcbsfexh0-9])",
+            end: "[dcbsfexh0-9]"
+          }
         ]
       },
       hljs.COMMENT("#", "$")
