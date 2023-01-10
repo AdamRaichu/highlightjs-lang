@@ -4,7 +4,7 @@
   Author: AdamRaichu
 */
 
-export default function (hljs) {
+module.exports = function (hljs) {
   return {
     name: "lang",
     case_insensitive: false,
@@ -50,4 +50,4 @@ export default function (hljs) {
       hljs.COMMENT("#", "$"),
     ],
   };
-}
+};
