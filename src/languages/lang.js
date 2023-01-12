@@ -11,7 +11,7 @@ module.exports = function (hljs) {
     // §[0-9a-gk-or]{1}
     contains: [
       {
-        className: "string",
+        className: "attr",
         begin: "^[A-Za-z0-9]",
         end: "[A-Za-z0-9](?==)|(?=#)",
         contains: [
@@ -22,9 +22,15 @@ module.exports = function (hljs) {
         ],
       },
       {
+        className: "string",
         begin: "\\=",
         end: "(?!.)|(?=#)",
         contains: [
+          {
+            className: "punctuation",
+            begin: "^\\=",
+            end: "(?!=)",
+          },
           {
             className: "built_in",
             begin: "§(?=[0-9a-gk-or])",
