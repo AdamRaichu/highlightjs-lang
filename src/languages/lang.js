@@ -23,14 +23,9 @@ module.exports = function (hljs) {
       },
       {
         className: "string",
-        begin: "\\=",
+        begin: "(?<=\\=)[A-Za-z]",
         end: "(?!.)|(?=#)",
         contains: [
-          {
-            className: "punctuation",
-            begin: "^\\=",
-            end: "(?!=)",
-          },
           {
             className: "built_in",
             begin: "§(?=[0-9a-gk-or])",
