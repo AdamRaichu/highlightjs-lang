@@ -1,5 +1,7 @@
 # Highlight.js Lang
 
+# This repository has been moved to [highlightjs/highlightjs-lang](https://github.com/highlightjs/highlightjs-lang)
+
 This repository contains a language grammar for Minecraft's `.lang` files for [highlight.js][hljs-website].
 
 ## Basic Usage
